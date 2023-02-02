@@ -1,8 +1,8 @@
-FROM node:12-slim
+FROM node:alpine
 WORKDIR /usr/src/app
-COPY package*.json ./
-RUN npm install --only=production
-RUN npm run tsc
-COPY . ./
-RUN npm run build
-# CMD [ "npm", "run", "build" ]
+COPY package.json ./
+RUN npm install\
+  && npm install typescript -g
+COPY . .
+RUN tsc
+CMD [ "node", "./dist/app.js" ]
