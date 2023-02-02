@@ -3,4 +3,6 @@ WORKDIR /usr/src/app
 COPY package*.json ./
 RUN npm install --only=production
 COPY . ./
-CMD [ "npm", "run", "build" ]
+RUN tsc
+RUN npm run build
+# CMD [ "npm", "run", "build" ]
