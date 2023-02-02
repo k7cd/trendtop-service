@@ -4,10 +4,8 @@
   "description": "Simple example in Node",
   "main": "app.js",
   "scripts": {
-    // "dev": "cross-env NODE_ENV=development nodemon ./src/app.ts",
-    // "build": "tsc && cross-env NODE_ENV=production node dist/app.js",
-    "start": "node ./dist/app.js",
-    "tsc": "tsc --outDir ./dist"
+    "tsc": "tsc",
+    "start": "node ./dist/app.js"
   },
   "author": "",
   "license": "Apache-2.0",
